@@ -9,3 +9,18 @@ library ("usethis")
 
 use_git_config(user.name = "KDibacco", user.email = "katrinadibacco@hotmail.com")
 edit_git_config()
+use_git()
+1
+
+library('tidyverse')
+# Download data to R
+new_data <- read.csv("~/Documents/PhD/MEV 6700/train.csv")
+
+# Explore data characteristics 
+summary(new_data) # Summarize each variable. 
+
+new_data %>% ggplot(aes(x = x0)) + geom_histogram()
+
+
+# let's cerate a boxplot for the same variable "x0"
+new_data %>% ggplot(aes(x = x0)) + geom_box()
